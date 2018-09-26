@@ -1,0 +1,11 @@
+.container{
+  max-width: 966px;
+  width: 100%;
+  padding: 0 15px;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.section_bg_color{
+  background: #E5E5E5;
+}

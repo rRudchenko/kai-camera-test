@@ -1,0 +1,9 @@
+.footer{
+  background: #F9C806;
+  padding: 28px 0;
+}
+.footer_copy{
+  display: inline-block;
+  font: 20px/20px 'Roboto';
+  color: #fff;
+}

@@ -1,0 +1,26 @@
+.tabs{
+  border-bottom: 1px solid #EFEFEF;
+}
+.tabs_title{
+  display: inline-block;
+  font: 20px/30px 'Roboto';
+  color: #4E4E4E;
+  opacity: 0.6;
+  margin-right: 60px;
+}
+.tabs_title_active{
+  color: #F9C806;
+  border-bottom: 1px solid #F9C806;
+}
+.images_gallery{
+  padding: 30px 0 30px;
+}
+.images_gallery_slot{
+  margin-bottom: 28px;
+  width: 293px;
+  height: 293px;
+  margin-right: 28px;
+}
+.images_gallery_slot:nth-child(3n){
+  margin-right: 0;
+}

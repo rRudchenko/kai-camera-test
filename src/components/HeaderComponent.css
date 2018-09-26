@@ -1,0 +1,26 @@
+.header{
+  border-bottom: 1px solid #EFEFEF;
+  padding: 14px 0;
+}
+.header_nav{
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  display: inline-block;
+  height: 50px;
+  width: auto;
+}
+.menu_link{
+  display: inline-block;
+  color: #4E4E4E;
+  opacity: 0.6;
+  font: 20px/50px 'Roboto';
+  margin-left: 50px
+}
+.menu_link:first-child{
+  margin-left: 0;
+}
+.menu_link:hover{
+  color: #F9C806;
+}
