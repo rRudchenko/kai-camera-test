@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './HeaderComponent.css';
-import logo from '../logo.svg';
 import Menu from './MenuComponent'
 
 class Header extends Component {
@@ -9,7 +8,7 @@ class Header extends Component {
       <header className="header">
         <div className="container header_nav">
           <a href="/" className="logo">
-            <img src={logo} alt="Kai camera" />
+            <img src="./logo.svg" alt="Kai camera" />
           </a>
           <Menu />
         </div>

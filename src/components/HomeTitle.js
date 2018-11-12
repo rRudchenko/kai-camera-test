@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './HomeTitle.css';
-import img_welcome from '../img/title_photo.svg';
-import img_smille from '../img/smille.svg';
 
 class HomeTitle extends Component {
   render() {
@@ -9,11 +7,11 @@ class HomeTitle extends Component {
       <div className="section_bg_color">
         <div className="container">
           <div className="section_title">
-            <img src={img_welcome} alt="welcome" className="section_title-img" />
+            <img src="./img/title_photo.svg" alt="welcome" className="section_title-img" />
             <div>
               <h2 className="h2">Hi!</h2>
-              <h2 className="h2">Welcome to my photoblog!
-                <img src={img_smille} alt="smille" />
+              <h2 className="h2 h2_img">Welcome to my photoblog!
+                <img src="./img/smille.svg" alt="smille" className="h2_images" />
               </h2>
             </div>
           </div>

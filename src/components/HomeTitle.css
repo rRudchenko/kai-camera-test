@@ -14,3 +14,9 @@
   font: 25px/35px 'Roboto';
   color: #4E4E4E;
 }
+.h2_img{
+  display: flex;
+}
+.h2_images{
+  margin-left: 10px;
+}

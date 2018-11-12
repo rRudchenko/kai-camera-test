@@ -16,7 +16,8 @@
   color: #4E4E4E;
   opacity: 0.6;
   font: 20px/50px 'Roboto';
-  margin-left: 50px
+  margin-left: 50px;
+  text-transform: uppercase;
 }
 .menu_link:first-child{
   margin-left: 0;
