@@ -1,3 +1,6 @@
+.galleryHeight{
+  min-height:64vh;
+}
 .tabs{
   border-bottom: 1px solid #EFEFEF;
 }
@@ -10,6 +13,9 @@
   cursor: pointer;
   padding-bottom: 8px;
   text-transform: capitalize;
+}
+.tabs > p:last-child{
+  margin-right: 0;
 }
 .tabs_selected{
   color: #F9C806;
@@ -32,4 +38,29 @@
 }
 .images_gallery_slot:nth-child(3n){
   margin-right: 0;
+}
+
+@media only screen and (max-width : 992px){
+  .images_gallery{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .images_gallery_slot{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .images_gallery_slot:nth-child(3n){
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width : 480px){
+  .tabs{
+    text-align: center;
+  }
+  .tabs > p{
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

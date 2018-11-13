@@ -5,6 +5,7 @@
 .header_nav{
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .logo{
   display: inline-block;
@@ -24,4 +25,11 @@
 }
 .menu_link:hover{
   color: #F9C806;
+}
+
+
+@media only screen and (max-width : 768px){
+  .menu{
+    display: none;
+  }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './HeaderComponent.css';
-import Menu from './MenuComponent'
+import Menu from './MenuComponent';
+import MenuButton from './MenuButton';
 
 class Header extends Component {
   render() {
@@ -10,6 +11,7 @@ class Header extends Component {
           <a href="/" className="logo">
             <img src="./logo.svg" alt="Kai camera" />
           </a>
+          <MenuButton/>
           <Menu />
         </div>
       </header>

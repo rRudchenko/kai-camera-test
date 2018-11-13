@@ -10,8 +10,8 @@ class HomeTitle extends Component {
             <img src="./img/title_photo.svg" alt="welcome" className="section_title-img" />
             <div>
               <h2 className="h2">Hi!</h2>
-              <h2 className="h2 h2_img">Welcome to my photoblog!
-                <img src="./img/smille.svg" alt="smille" className="h2_images" />
+              <h2 className="h2 h2_img"><span className="h2_imgText">Welcome to my photoblog!</span>
+                <img src="./img/smille.svg" alt="smille"/>
               </h2>
             </div>
           </div>

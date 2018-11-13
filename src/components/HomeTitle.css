@@ -16,7 +16,25 @@
 }
 .h2_img{
   display: flex;
+  flex-wrap: wrap;
 }
-.h2_images{
-  margin-left: 10px;
+.h2_imgText{
+  margin-right: 10px;
+}
+
+@media only screen and (max-width : 480px){
+  .section_title{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .section_title .h2{
+    text-align: center;
+  }
+  .section_title-img{
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .h2_img{
+    justify-content: center;
+  }
 }
