@@ -1,14 +1,16 @@
 {
-  "name": "camera",
-  "version": "0.1.0",
+  "name": "kai-camera",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "cleanup": "rm -rf .cache public",
+    "reload": "yarn cleanup && rm -rf node_modules && yarn",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lintFix": "eslint . --fix",
     "lint-staged": "lint-staged"
   },
   "dependencies": {
@@ -34,11 +36,9 @@
     "react-images": "^0.5.19",
     "react-lightbox-component": "^1.2.1",
     "react-photo-gallery": "^6.2.1",
-    "react-scripts": "^3.0.1",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
