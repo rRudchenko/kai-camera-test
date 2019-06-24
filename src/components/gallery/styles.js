@@ -2,70 +2,62 @@ import styled from 'styled-components'
 import Img from 'gatsby-image/withIEPolyfill'
 
 export const ShotsList = styled.div`
-  /* border: 1px dotted violet; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   padding: 5px;
-  /* width: auto; */
-  /* @media (max-width: 768px) {
-    justify-content: space-around;
-  } */
 `
 
 export const ShotContainer = styled.div`
-  border: 1px solid green;
   width: 300px;
   height: 300px;
-  /* display: flex; */
-  /* align-items: center; */
   margin: 5px;
   cursor: pointer;
+  object-fit: contain;
+  object-position: 50% 50%;
 `
 
 export const ShotImage = styled(Img)`
-  /* border: 1px solid blue; */
   object-fit: contain;
   object-position: 50% 50%;
   margin: auto;
-  width: 100%;
+  width: auto;
   height: 100%;
   max-width: ${props => props.fluid.presentationWidth};
   max-height: ${props => props.fluid.presentationHeight};
 `
 
 export const HorizontalShotImage = styled(ShotImage)`
-  width: auto;
-  /* height: auto; */
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   min-width: 70%;
-  min-height: 100%;
-  /* min-height: ${props =>
-    props.fluid.presentationWidth * props.fluid.aspectRatio}; */
+  /* min-height: 100%; */
 `
 
 export const VerticalShotImage = styled(ShotImage)`
-  width: auto;
-  /* height: auto; */
-  min-width: 30%;
-  min-height: 100%;
+  height: 100%;
+  max-width: auto;
+  max-height: auto;
+  min-width: 40%;
+  min-height: 80%;
 `
 
 export const SquareShotImage = styled(ShotImage)`
-  width: auto;
-  /* height: auto; */
   min-width: 50%;
   min-height: 100%;
 `
 
 export const LightboxContent = styled.div`
-  border: 1px solid red;
   display: flex;
   flex-flow: row nowrap;
   margin: auto;
   width: 100%;
   height: 100%;
-  max-width: 99%;
-  max-height: 99%;
+  object-fit: contain;
+  object-position: 50% 50%;
+  /* max-width: 100%;
+  max-height: 100%; */
 `
 
 export const LightboxModal = styled.div`
@@ -74,36 +66,39 @@ export const LightboxModal = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   background: rgba(0, 0, 0, 0.7);
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
 `
 
-// export const Button = styled.button``
-
-export const Controls = styled.div`
+export const Arrow = styled.div`
+  background: #e5e5e5;
   display: flex;
-  justify-content: space-between;
-`
-
-export const Prev = styled.div`
-  background: #e5e5e5;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 5%;
   height: 100%;
   visibility: ${props => (props.disabled === true ? 'hidden' : 'visible')};
 `
 
-export const PrevIcon = styled(Img)`
-  width: 50px;
-  height: 50px;
+export const Close = styled.div`
+  /* background: #e5e5e5; */
+  color: #f9c806;
+  width: 20px;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-export const Next = styled.div`
-  background: #e5e5e5;
-  width: 5%;
-  height: 100%;
-  visibility: ${props => (props.disabled === true ? 'hidden' : 'visible')};
+export const MaterialIcon = styled.div`
+  font-family: 'Material Icons';
+  color: #f9c806;
+  font-size: 60px;
 `

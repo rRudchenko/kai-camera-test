@@ -3,13 +3,17 @@ import { Link } from '../link/Link'
 
 export const HeaderContainer = styled.header`
   border-bottom: 1px solid #efefef;
-  padding: 14px 0;
+  padding: 14px 10px;
 `
 
 export const HeaderNav = styled.nav`
   display: flex;
   justify-content: space-between;
   position: relative;
+  @media (max-width: 596px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const HeaderMenu = styled.div`
@@ -32,6 +36,6 @@ export const LinkStyle = styled(Link)`
     color: #f9c806;
   }
   @media only screen and (max-width: 768px) {
-    display: none;
+    display: block;
   }
 `

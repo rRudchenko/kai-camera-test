@@ -14,14 +14,13 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
-        path: `${__dirname}/static/icons`,
-        name: 'icons',
+        fonts: ['material icons', 'roboto:300,400,500,700'],
       },
     },
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

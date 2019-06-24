@@ -1,8 +1,9 @@
 import React from 'react'
-import { Img } from 'gatsby-image'
-// import prevSVG from '../../../static/icons/arrow_previous.svg'
+// import { Img } from 'gatsby-image'
+import { Img } from '../common'
 // import { Shot } from './_Shot'
 import {
+  MaterialIcon,
   PrevIcon,
   ShotContainer,
   ShotsList,
@@ -10,11 +11,10 @@ import {
   VerticalShotImage,
   SquareShotImage,
   ShotImage,
-  Button,
   LightboxModal,
   LightboxContent,
-  Prev,
-  Next,
+  Arrow,
+  Close,
   Controls,
   LeftRight,
 } from './styles'
@@ -143,19 +143,21 @@ export class Shots extends React.Component {
           ))}
         </ShotsList>
 
-        <LightboxModal
-          visible={showLightBox}
-          // onClick={this.closeLightBox}
-        >
+        <LightboxModal visible={showLightBox}>
+          <Close onClick={this.closeLightBox}>
+            <MaterialIcon>clear</MaterialIcon>
+          </Close>
           <LightboxContent onKeyUp={e => this.handleKeyUp(e)}>
-            <Prev onClick={this.goPrev} disabled={selectedImage === 0}>
-              {/* <PrevIcon src='/static/icons/arrow_next.svg' /> */}
-            </Prev>
+            <Arrow onClick={this.goPrev} disabled={selectedImage === 0}>
+              <MaterialIcon>keyboard_arrow_left</MaterialIcon>
+            </Arrow>
             {this.getLightBoxImage(data[selectedImage].fluid)}
-            <Next
+            <Arrow
               onClick={this.goNext}
               disabled={selectedImage === data.length - 1}
-            />
+            >
+              <MaterialIcon>keyboard_arrow_right</MaterialIcon>
+            </Arrow>
           </LightboxContent>
         </LightboxModal>
       </>

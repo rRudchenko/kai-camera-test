@@ -4,7 +4,6 @@ import { Shots } from './Shots'
 
 export default ({ data }) => (
   <>
-    {/* <Img src='../static/img/100_0672.png' alt='zzzz' /> */}
     <Shots
       data={data.allImageSharp.edges.map((image, index) => ({
         fluid: image.node.fluid,
