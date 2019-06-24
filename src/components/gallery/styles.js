@@ -18,8 +18,6 @@ export const ShotContainer = styled.div`
 `
 
 export const ShotImage = styled(Img)`
-  object-fit: contain;
-  object-position: 50% 50%;
   margin: auto;
   width: auto;
   height: 100%;
@@ -28,23 +26,21 @@ export const ShotImage = styled(Img)`
 `
 
 export const HorizontalShotImage = styled(ShotImage)`
-  height: 100%;
   max-width: 100%;
-  max-height: 100%;
+  max-height: auto;
   min-width: 70%;
-  /* min-height: 100%; */
 `
 
 export const VerticalShotImage = styled(ShotImage)`
   height: 100%;
   max-width: auto;
   max-height: auto;
-  min-width: 40%;
-  min-height: 80%;
+  min-width: 50%;
+  min-height: 90%;
 `
 
 export const SquareShotImage = styled(ShotImage)`
-  min-width: 50%;
+  min-width: 90%;
   min-height: 100%;
 `
 

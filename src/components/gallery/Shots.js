@@ -1,7 +1,6 @@
 import React from 'react'
-// import { Img } from 'gatsby-image'
 import { Img } from '../common'
-// import { Shot } from './_Shot'
+
 import {
   MaterialIcon,
   PrevIcon,
@@ -93,6 +92,8 @@ export class Shots extends React.Component {
       return (
         <HorizontalShotImage
           // id={imgFluid.id}
+          objectFit='contain'
+          objectPosition='50% 50%'
           fluid={imgFluid}
           alt='images gallery'
         />
@@ -106,7 +107,8 @@ export class Shots extends React.Component {
       console.log('state', this.state.selectedImage)
       return (
         <VerticalShotImage
-          // id={imgFluid.id}
+          objectFit='contain'
+          objectPosition='50% 50%'
           fluid={imgFluid}
           alt='images gallery'
         />
@@ -120,7 +122,8 @@ export class Shots extends React.Component {
       console.log('state', this.state.selectedImage)
       return (
         <SquareShotImage
-          // id={imgFluid.id}
+          objectFit='contain'
+          objectPosition='50% 50%'
           fluid={imgFluid}
           alt='images gallery'
         />
