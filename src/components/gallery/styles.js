@@ -52,8 +52,6 @@ export const LightboxContent = styled.div`
   height: 100%;
   object-fit: contain;
   object-position: 50% 50%;
-  /* max-width: 100%;
-  max-height: 100%; */
 `
 
 export const LightboxModal = styled.div`
@@ -73,6 +71,7 @@ export const Arrow = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   width: 5%;
   height: 100%;
   visibility: ${props => (props.disabled === true ? 'hidden' : 'visible')};
