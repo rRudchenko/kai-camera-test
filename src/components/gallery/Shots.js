@@ -6,9 +6,6 @@ import {
   PrevIcon,
   ShotContainer,
   ShotsList,
-  HorizontalShotImage,
-  VerticalShotImage,
-  SquareShotImage,
   ShotImage,
   LightboxModal,
   LightboxContent,
@@ -82,57 +79,17 @@ export class Shots extends React.Component {
   }
 
   getLightBoxImage = imgFluid => {
-    if (imgFluid.presentationWidth > imgFluid.presentationHeight) {
-      console.log(
-        'WIDTH IS BIGGER',
-        imgFluid.presentationWidth,
-        imgFluid.presentationHeight
-      )
-      console.log('state', this.state.selectedImage)
-      return (
-        <HorizontalShotImage
-          // id={imgFluid.id}
-          objectFit='contain'
-          objectPosition='50% 50%'
-          fluid={imgFluid}
-          alt='images gallery'
-        />
-      )
-    } else if (imgFluid.presentationWidth < imgFluid.presentationHeight) {
-      console.log(
-        'HEIGHT IS BIGGER',
-        imgFluid.presentationWidth,
-        imgFluid.presentationHeight
-      )
-      console.log('state', this.state.selectedImage)
-      return (
-        <VerticalShotImage
-          objectFit='contain'
-          objectPosition='50% 50%'
-          fluid={imgFluid}
-          alt='images gallery'
-        />
-      )
-    } else {
-      console.log(
-        'WIDTH IS EQUAL HEIGHT',
-        imgFluid.presentationWidth,
-        imgFluid.presentationHeight
-      )
-      console.log('state', this.state.selectedImage)
-      return (
-        <SquareShotImage
-          objectFit='contain'
-          objectPosition='50% 50%'
-          fluid={imgFluid}
-          alt='images gallery'
-        />
-      )
-    }
+    return (
+      <ShotImage
+        objectFit='contain'
+        objectPosition='50% 50%'
+        fluid={imgFluid}
+        alt='images gallery'
+      />
+    )
   }
 
   render() {
-    console.log('shots props data', this.props.data)
     const { data } = this.props
     const { showLightBox, selectedImage } = this.state
 

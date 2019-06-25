@@ -23,23 +23,6 @@ export const ShotImage = styled(Img)`
   height: 100%;
   max-width: ${props => props.fluid.presentationWidth};
   max-height: ${props => props.fluid.presentationHeight};
-`
-
-export const HorizontalShotImage = styled(ShotImage)`
-  max-width: 100%;
-  max-height: auto;
-  min-width: 70%;
-`
-
-export const VerticalShotImage = styled(ShotImage)`
-  height: 100%;
-  max-width: auto;
-  max-height: auto;
-  min-width: 50%;
-  min-height: 90%;
-`
-
-export const SquareShotImage = styled(ShotImage)`
   min-width: 90%;
   min-height: 100%;
 `
@@ -50,8 +33,6 @@ export const LightboxContent = styled.div`
   margin: auto;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: 50% 50%;
 `
 
 export const LightboxModal = styled.div`
