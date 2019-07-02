@@ -5,7 +5,7 @@ import { Shots } from './Shots'
 export default ({ data }) => (
   <>
     <Shots
-      data={data.allImageSharp.edges.map((image, index) => ({
+      data={data.allImageSharp.edges.map(image => ({
         fluid: image.node.fluid,
       }))}
     />

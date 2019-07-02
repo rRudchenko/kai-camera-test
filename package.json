@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"src/**/*.js\"",
+    "develop": "gatsby develop -p 8000",
+    "production": "gatsby build && gatsby serve -p 8005 -o",
     "cleanup": "rm -rf .cache public",
     "reload": "yarn cleanup && rm -rf node_modules && yarn",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "reloadDev": "yarn reload && yarn develop",
+    "cleanPort": "fuser -n tcp -k 8000",
+    "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint .",
-    "lintFix": "eslint . --fix",
-    "lint-staged": "lint-staged"
+    "lintFix": "eslint . --fix"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -41,28 +41,43 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-styled-components": "^1.10.1",
     "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-compat": "^3.1.2",
+    "eslint-plugin-deprecate": "^0.5.4",
     "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
-    "prettier": "^1.17.1"
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write",
+      "pretty-quick",
       "eslint --fix",
+      "stylelint --fix",
       "git add"
     ],
-    "*.{scss,css}": [
-      "prettier --write",
+    "*.{json,html}": [
+      "pretty-quick",
       "git add"
     ],
-    "*.json": [
-      "prettier --write",
+    "*.{css,scss}": [
+      "pretty-quick",
+      "stylelint --fix",
       "git add"
     ]
   },

@@ -1,12 +1,21 @@
 {
-  "extends": ["prettier"],
-  "plugins": ["react", "prettier"],
+  "extends": [
+    "standard",
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "plugins": ["standard", "prettier"],
 
   "rules": {
     "no-var": "error",
-    "no-unused-vars": 1,
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "quotes": ["error", "single", { "avoidEscape": true }],
+    "standard/object-curly-even-spacing": ["error", "either"],
+    "standard/array-bracket-even-spacing": ["error", "either"],
+    "standard/computed-property-even-spacing": ["error", "even"],
+    "standard/no-callback-literal": ["error", ["cb", "callback"]],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "jsx-quotes": ["error", "prefer-single"],
@@ -32,7 +41,9 @@
     "react/no-danger": 0,
     "react/jsx-closing-bracket-location": [1, "tag-aligned"],
     "import/no-cycle": 0,
-    "prettier/prettier": 0
+    "prettier/prettier": 0,
+    "react/display-name": 0,
+    "no-unused-vars": 1
   },
   "parser": "babel-eslint",
   "parserOptions": {

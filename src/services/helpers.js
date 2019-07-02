@@ -2,8 +2,8 @@
 
 export function isExternal(path) {
   return (
-    /^http[s]?:\/\//g.test(path) ||
-    path.startsWith('mailto:') ||
-    path.startsWith('tel:')
+    /^http[s]?:\/\//g.test(path)
+    || path.startsWith('mailto:')
+    || path.startsWith('tel:')
   )
 }

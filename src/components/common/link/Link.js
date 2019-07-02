@@ -9,21 +9,20 @@ export const Link = ({
   partiallyActive,
   children,
   ...props
-}) =>
-  isExternal(to) ? (
-    <a href={to} {...props}>
-      {children}
-    </a>
-  ) : (
-    <GatsbyLink
-      activeClassName={activeClassName}
-      partiallyActive={partiallyActive}
-      to={to}
-      {...props}
-    >
-      {children}
-    </GatsbyLink>
-  )
+}) => (isExternal(to) ? (
+  <a href={to} {...props}>
+    {children}
+  </a>
+) : (
+  <GatsbyLink
+    activeClassName={activeClassName}
+    partiallyActive={partiallyActive}
+    to={to}
+    {...props}
+  >
+    {children}
+  </GatsbyLink>
+))
 Link.propTypes = {
   to: string.isRequired,
 }

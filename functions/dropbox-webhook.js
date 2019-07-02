@@ -1,7 +1,6 @@
 const axios = require('axios')
 
-const NETLIFY_HOOK_URL =
-  'https://api.netlify.com/build_hooks/5d1103cb4b2d00d042fa8a36'
+const NETLIFY_HOOK_URL = 'https://api.netlify.com/build_hooks/5d1103cb4b2d00d042fa8a36'
 
 const VERIFICATION_HEADERS = {
   'Content-Type': 'text/plain',
@@ -16,10 +15,11 @@ exports.handler = async (event, context) => {
     if (challenge) {
       // Verification
       console.info(
-        'Success: verification request received and responded to appropriately.'
+        'Success: verification request received and responded to appropriately.',
       )
       return { statusCode: 200, body: challenge, headers: VERIFICATION_HEADERS }
-    } else if (headers['x-dropbox-signature']) {
+    }
+    if (headers['x-dropbox-signature']) {
       // Execution
       console.info('NOTIFICATION EVENT\n', body)
 
@@ -33,13 +33,17 @@ exports.handler = async (event, context) => {
         body:
           'BODY SUCCESS: webhook received from Dropbox and forwarded blah-blah-blah',
       }
-    } else {
-      // Failure
-      const msg =
-        'Failed: the request was not what was expected so nothing happened.'
-      console.error('MMSSGG\n', msg)
-      return { statusCode: 200, body: msg }
     }
+    // Failure
+    const msg = 'Failed: the request was not what was expected so nothing happened.'
+    console.error('MMSSGG\n', msg)
+    return { statusCode: 200, body: msg }
+
+    // // Failure
+    // const msg = 'Failed: the request was not what was expected so nothing happened.'
+    // console.error('MMSSGG\n', msg)
+    // // console.error('NOT EXPECTED REQUEST EVENT\n', event)
+    // return { statusCode: 200, body: msg }
   } catch (e) {
     // Failure
     console.error('Failed: something went wrong\n', e.message)

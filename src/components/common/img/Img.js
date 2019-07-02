@@ -5,7 +5,9 @@ import T from 'prop-types'
 
 export const Img = ({ src, ...props }) => {
   if (typeof src === 'object') {
-    const { fluid, file, fixed, alt } = src
+    const {
+      fluid, file, fixed, alt,
+    } = src
     if (file && file.url.endsWith('.svg')) {
       return <img src={file.url} alt={alt} {...props} />
     }
@@ -20,7 +22,7 @@ export const Img = ({ src, ...props }) => {
     }
     console.log('Strange object src')
   }
-  return <img src={withPrefix(src)} {...props} />
+  return <img src={withPrefix(src)} alt='' {...props} />
 }
 Img.propTypes = {
   src: T.oneOfType([T.object, T.string]).isRequired,
