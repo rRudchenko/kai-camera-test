@@ -10,6 +10,7 @@ import {
   LightboxModal,
   LightboxContent,
   Arrow,
+  // ArrowIcon,
   Close,
   Controls,
   LeftRight,
@@ -109,14 +110,16 @@ export class Shots extends React.Component {
           </Close>
           <LightboxContent onKeyUp={e => this.handleKeyUp(e)}>
             <Arrow onClick={this.goPrev} disabled={selectedImage === 0}>
-              <MaterialIcon>keyboard_arrow_left</MaterialIcon>
+              <img src='/icons/arrow_previous.png' alt='prev arrow' />
+              {/* <MaterialIcon>keyboard_arrow_left</MaterialIcon> */}
             </Arrow>
             {this.getLightBoxImage(data[selectedImage].fluid)}
             <Arrow
               onClick={this.goNext}
               disabled={selectedImage === data.length - 1}
             >
-              <MaterialIcon>keyboard_arrow_right</MaterialIcon>
+              <img src='/icons/arrow_next.png' alt='next arrow' />
+              {/* <MaterialIcon>keyboard_arrow_right</MaterialIcon> */}
             </Arrow>
           </LightboxContent>
         </LightboxModal>
