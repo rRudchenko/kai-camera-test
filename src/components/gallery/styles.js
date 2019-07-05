@@ -6,8 +6,6 @@ export const ShotsList = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   padding: 5px;
-  margin: 0 auto;
-  max-width: 935px;
 `
 
 export const ShotContainer = styled.div`
@@ -25,7 +23,7 @@ export const ShotImage = styled(Img)`
   height: 100%;
   max-width: ${props => props.fluid.presentationWidth};
   max-height: ${props => props.fluid.presentationHeight};
-  min-width: 70%;
+  min-width: 90%;
   min-height: 100%;
 `
 
@@ -43,31 +41,30 @@ export const LightboxModal = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
 `
 
 export const Arrow = styled.div`
-  display: ${props => (props.showLightBox ? 'flex' : 'none')};
+  background: #e5e5e5;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 0 10px;
+  width: 5%;
   height: 100%;
   visibility: ${props => (props.disabled === true ? 'hidden' : 'visible')};
-  img {
-    width: 100%;
-    height: auto;
-  }
 `
 
 export const Close = styled.div`
+  /* background: #e5e5e5; */
   color: #f9c806;
   width: 20px;
   height: auto;
   position: absolute;
+  top: 20px;
   right: 20px;
   z-index: 10;
   cursor: pointer;
