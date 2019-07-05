@@ -6,6 +6,13 @@ import {
 class Menu extends Component {
   state = {
     isOpen: false,
+    windowWidth: null,
+  }
+
+  componentDidMount() {
+    this.setState({
+      windowWidth: window.innerWidth,
+    })
   }
 
   toggle = () => {
@@ -14,17 +21,22 @@ class Menu extends Component {
     }))
   }
 
-  getHeaderMenu = () => {
-    const menus = ['subscribe', 'donate', 'about']
-    if (window.innerWidth < 596) {
+  getHeaderMenu = () => ['subscribe', 'donate', 'about'].map((value, index) => (
+    <LinkStyle key={index} to={`/${value}`}>
+      {value}
+    </LinkStyle>
+  ))
+
+  render() {
+    if (this.state.windowWidth < 596) {
       return (
-        <>
+        <HeaderMenu>
           <Accordion onClick={this.toggle}>
             <MaterialIcon>dehaze</MaterialIcon>
           </Accordion>
-          {menus.map((value, index) => (
+          {['subscribe', 'donate', 'about'].map((value, index) => (
             <Panel
-              availWidth={window.innerWidth}
+              availWidth={this.state.windowWidth}
               isOpen={this.state.isOpen}
               key={index}
             >
@@ -33,17 +45,9 @@ class Menu extends Component {
               </LinkStyle>
             </Panel>
           ))}
-        </>
+        </HeaderMenu>
       )
     }
-    return menus.map((value, index) => (
-      <LinkStyle key={index} to={`/${value}`}>
-        {value}
-      </LinkStyle>
-    ))
-  }
-
-  render() {
     return <HeaderMenu>{this.getHeaderMenu()}</HeaderMenu>
   }
 }

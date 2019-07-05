@@ -6,10 +6,10 @@ export const HomeContainer = styled.section`
   align-items: center;
   padding: 10px;
   background: #e5e5e5;
-  /* @media (max-width: 480px) {
+  @media (max-width: 596px) {
     flex-wrap: wrap;
     justify-content: center;
-  } */
+  }
 `
 
 export const HomeImg = styled(Img)`
@@ -25,9 +25,9 @@ export const HomeIcon = styled(Img)`
 `
 
 export const HomeText = styled.p`
-  font: 25px/35px 'Roboto';
+  font: 25px/35px 'Roboto', sans-serif;
   color: #4e4e4e;
-  /* @media (max-width: 480px) {
+  @media (max-width: 596px) {
     text-align: center;
-  } */
+  }
 `

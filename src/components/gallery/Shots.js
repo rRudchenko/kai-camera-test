@@ -1,19 +1,14 @@
 import React from 'react'
-// import { Img } from '../common'
 
 import {
   MaterialIcon,
-  // PrevIcon,
   ShotContainer,
   ShotsList,
   ShotImage,
   LightboxModal,
   LightboxContent,
   Arrow,
-  // ArrowIcon,
   Close,
-  // Controls,
-  // LeftRight,
 } from './styles'
 
 export class Shots extends React.Component {
@@ -107,17 +102,20 @@ export class Shots extends React.Component {
             <MaterialIcon>clear</MaterialIcon>
           </Close>
           <LightboxContent onKeyUp={e => this.handleKeyUp(e)}>
-            <Arrow onClick={this.goPrev} disabled={selectedImage === 0}>
+            <Arrow
+              onClick={this.goPrev}
+              showLightBox={showLightBox}
+              disabled={selectedImage === 0}
+            >
               <img src='/icons/arrow_previous.png' alt='prev arrow' />
-              {/* <MaterialIcon>keyboard_arrow_left</MaterialIcon> */}
             </Arrow>
             {this.getLightBoxImage(data[selectedImage].fluid)}
             <Arrow
               onClick={this.goNext}
+              showLightBox={showLightBox}
               disabled={selectedImage === data.length - 1}
             >
               <img src='/icons/arrow_next.png' alt='next arrow' />
-              {/* <MaterialIcon>keyboard_arrow_right</MaterialIcon> */}
             </Arrow>
           </LightboxContent>
         </LightboxModal>

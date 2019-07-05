@@ -49,7 +49,7 @@ export const LightboxModal = styled.div`
 `
 
 export const Arrow = styled.div`
-  display: flex;
+  display: ${props => (props.showLightBox ? 'flex' : 'none')};
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -77,7 +77,7 @@ export const Close = styled.div`
 `
 
 export const MaterialIcon = styled.div`
-  font-family: 'Material Icons';
+  font-family: 'Material Icons', sans-serif;
   color: #f9c806;
   font-size: 60px;
 `
