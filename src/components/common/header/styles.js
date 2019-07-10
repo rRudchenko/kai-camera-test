@@ -13,22 +13,27 @@ export const LinkStyle = styled(Link)`
   color: #4e4e4e;
   opacity: 0.6;
   font: 20px/50px 'Roboto', sans-serif;
-  margin-left: 50px;
+  margin-right: 50px;
   text-transform: uppercase;
   text-decoration: none;
-  &:first-child {
-    margin-left: 0;
-  }
+  /* &:first-child {
+    margin-right: 0;
+  } */
   &:hover {
     color: #f9c806;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 596px) {
     display: block;
   }
 `
 
+export const BurgerLink = styled(LinkStyle)`
+  margin-right: 0;
+`
+
 export const HeaderMenu = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   @media (max-width: 596px) {
     flex-direction: column;

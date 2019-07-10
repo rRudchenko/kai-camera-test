@@ -1,16 +1,18 @@
 import React from 'react'
-import Menu from './Menu'
+import NavMenu from './NavMenu'
 import { Img } from '..'
 
 import { HeaderContainer, LinkStyle } from './styles'
 
 const Header = () => (
-  <HeaderContainer>
-    <LinkStyle to='/'>
-      <Img src='/icons/logo.svg' alt='Kai camera' />
-    </LinkStyle>
-    <Menu />
-  </HeaderContainer>
+  <div className='all'>
+    <NavMenu />
+    <HeaderContainer id='header-container'>
+      <LinkStyle to='/'>
+        <Img src='/icons/logo.svg' alt='Kai camera' />
+      </LinkStyle>
+    </HeaderContainer>
+  </div>
 )
 
 export default Header
