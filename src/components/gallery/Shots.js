@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Img } from '../common/img/Img'
 import {
   MaterialIcon,
   ShotContainer,
@@ -99,11 +99,17 @@ export class Shots extends React.Component {
 
         <LightboxModal visible={showLightBox}>
           <Close onClick={this.closeLightBox}>
-            <MaterialIcon>clear</MaterialIcon>
+            <MaterialIcon>close</MaterialIcon>
+            {/* <Img src='/icons/arrow_close.png' alt='' /> */}
           </Close>
           <LightboxContent onKeyUp={e => this.handleKeyUp(e)}>
-            <Arrow onClick={this.goPrev} disabled={selectedImage === 0}>
-              <MaterialIcon>keyboard_arrow_left</MaterialIcon>
+            <Arrow
+              onClick={this.goPrev}
+              showLightBox={showLightBox}
+              disabled={selectedImage === 0}
+            >
+              {/* <MaterialIcon>keyboard_arrow_left</MaterialIcon> */}
+              <Img src='/icons/arrow_previous.svg' alt='' />
             </Arrow>
             {this.getLightBoxImage(data[selectedImage].fluid)}
             <Arrow
@@ -111,7 +117,8 @@ export class Shots extends React.Component {
               showLightBox={showLightBox}
               disabled={selectedImage === data.length - 1}
             >
-              <MaterialIcon>keyboard_arrow_right</MaterialIcon>
+              {/* <MaterialIcon>keyboard_arrow_right</MaterialIcon> */}
+              <Img src='/icons/arrow_next.svg' alt='' />
             </Arrow>
           </LightboxContent>
         </LightboxModal>

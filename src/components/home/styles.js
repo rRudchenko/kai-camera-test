@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 import { Img } from '../common'
 
+export const MainContainer = styled.section`
+  background: #fafafa;
+  width: 100%;
+`
+
 export const HomeContainer = styled.section`
   display: flex;
   align-items: center;
+  max-width: 935px;
+  margin: 0 auto;
   padding: 10px;
-  background: #e5e5e5;
   @media (max-width: 596px) {
     flex-wrap: wrap;
     justify-content: center;

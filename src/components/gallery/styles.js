@@ -1,11 +1,42 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image/withIEPolyfill'
 
+export const MainContainer = styled.section`
+  background: #fafafa;
+  width: 100%;
+`
+
+export const TabsContainer = styled.section`
+  max-width: 935px;
+  margin: 0 auto 10px auto;
+  height: fit-content;
+  border-bottom: 1px solid darkgrey;
+`
+
+export const TabItem = styled.span`
+  font: 20px/50px 'Ubuntu', sans-serif;
+  margin-left: 10px;
+  color: #4e4e4e;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: color 0.5s;
+  /* &.active {
+  font-weight: 500;
+  } */
+  &:hover {
+    color: #f9c806;
+  }
+  &:not(:first-child) {
+    margin-left: 28px;
+  }
+`
+
 export const ShotsList = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 5px;
+  max-width: 960px;
+  margin: 0 auto;
 `
 
 export const ShotContainer = styled.div`
@@ -23,7 +54,7 @@ export const ShotImage = styled(Img)`
   height: 100%;
   max-width: ${props => props.fluid.presentationWidth};
   max-height: ${props => props.fluid.presentationHeight};
-  min-width: 90%;
+  min-width: 70%;
   min-height: 100%;
 `
 
@@ -47,26 +78,31 @@ export const LightboxModal = styled.div`
 `
 
 export const Arrow = styled.div`
-  background: #e5e5e5;
-  display: flex;
+  /* background: #e5e5e5; */
+  display: ${props => (props.showLightBox ? 'flex' : 'none')};
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
   cursor: pointer;
-  width: 5%;
+  width: 15%;
   height: 100%;
   visibility: ${props => (props.disabled === true ? 'hidden' : 'visible')};
+  img {
+    min-width: 30px;
+    max-width: 50px;
+  }
 `
 
 export const Close = styled.div`
-  /* background: #e5e5e5; */
   color: #f9c806;
   width: 20px;
   height: auto;
   position: absolute;
-  top: 20px;
+  /* top: 10px; */
   right: 20px;
-  z-index: 10;
+  z-index: 1900;
   cursor: pointer;
   display: flex;
   align-items: center;
