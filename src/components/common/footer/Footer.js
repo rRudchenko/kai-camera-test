@@ -1,10 +1,21 @@
 import React from 'react'
-import { FooterContainer, FooterText } from './styles'
+import {
+  MainContainer,
+  FooterContainer,
+  Cameras,
+  TextContainer,
+  FooterText,
+} from './styles'
 
 const Footer = () => (
-  <FooterContainer>
-    <FooterText>&copy; kai.camera, 2018</FooterText>
-  </FooterContainer>
+  <MainContainer>
+    <FooterContainer>
+      <Cameras />
+      <TextContainer>
+        <FooterText>&copy; kai.camera, 2018</FooterText>
+      </TextContainer>
+    </FooterContainer>
+  </MainContainer>
 )
 
 export default Footer
