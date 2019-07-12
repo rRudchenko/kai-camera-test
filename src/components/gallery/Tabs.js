@@ -8,40 +8,5 @@ export const Tabs = () => (
     {filters.map((filter, index) => (
       <TabItem key={index}>{filter}</TabItem>
     ))}
-
-    {/* onClick={() => this.props.toggleFilter(filter)} */}
-
-    {/* <p
-          className={this.props.filter === 'all' ? 'tabs_selected' : ''}
-          onClick={() => {
-            this.filterShots('all')
-          }}
-        >
-          all photos
-        </p>
-        <p
-          className={this.props.filter === 'featured' ? 'tabs_selected' : ''}
-          onClick={() => {
-            this.filterShots('featured')
-          }}
-        >
-          featured
-        </p>
-        <p
-          className={this.props.filter === 'games' ? 'tabs_selected' : ''}
-          onClick={() => {
-            this.filterShots('games')
-          }}
-        >
-          games
-        </p>
-        <p
-          className={this.props.filter === 'toys' ? 'tabs_selected' : ''}
-          onClick={() => {
-            this.filterShots('toys')
-          }}
-        >
-          toys
-        </p> */}
   </TabsContainer>
 )

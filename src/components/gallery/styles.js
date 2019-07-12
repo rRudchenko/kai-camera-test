@@ -8,26 +8,26 @@ export const MainContainer = styled.section`
 
 export const TabsContainer = styled.section`
   max-width: 935px;
-  margin: 0 auto 10px auto;
-  height: fit-content;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: max-content;
   border-bottom: 1px solid darkgrey;
 `
 
 export const TabItem = styled.span`
   font: 20px/50px 'Ubuntu', sans-serif;
-  margin-left: 10px;
+  margin-left: 28px;
+  box-sizing: border-box;
   color: #4e4e4e;
   opacity: 0.6;
   text-decoration: none;
   transition: color 0.5s;
-  /* &.active {
-  font-weight: 500;
-  } */
   &:hover {
     color: #f9c806;
   }
-  &:not(:first-child) {
-    margin-left: 28px;
+  &:first-child {
+    margin-left: 10px;
   }
 `
 
@@ -35,14 +35,16 @@ export const ShotsList = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  max-width: 960px;
+  max-width: 935px;
+  width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 `
 
 export const ShotContainer = styled.div`
   width: 300px;
   height: 300px;
-  margin: 5px;
+  padding: 5px;
   cursor: pointer;
   object-fit: contain;
   object-position: 50% 50%;
@@ -67,6 +69,7 @@ export const LightboxContent = styled.div`
 `
 
 export const LightboxModal = styled.div`
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 0;
@@ -78,7 +81,6 @@ export const LightboxModal = styled.div`
 `
 
 export const Arrow = styled.div`
-  /* background: #e5e5e5; */
   display: ${props => (props.showLightBox ? 'flex' : 'none')};
   flex-direction: row;
   align-items: center;
@@ -100,7 +102,6 @@ export const Close = styled.div`
   width: 20px;
   height: auto;
   position: absolute;
-  /* top: 10px; */
   right: 20px;
   z-index: 1900;
   cursor: pointer;

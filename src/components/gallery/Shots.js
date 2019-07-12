@@ -56,19 +56,16 @@ export class Shots extends React.Component {
     const { keyCode } = e
     if (this.state.showLightBox) {
       if (keyCode === 37) {
-        // Left Arrow Key Code
         if (this.state.selectedImage > 0) {
           this.setState(state => ({ selectedImage: state.selectedImage - 1 }))
         }
       }
       if (keyCode === 39) {
-        // Right Arrow Key Code
         if (this.state.selectedImage < this.props.data.length - 1) {
           this.setState(state => ({ selectedImage: state.selectedImage + 1 }))
         }
       }
       if (keyCode === 27) {
-        // Escape key Code
         this.setState({ showLightBox: false })
       }
     }
@@ -100,7 +97,6 @@ export class Shots extends React.Component {
         <LightboxModal visible={showLightBox}>
           <Close onClick={this.closeLightBox}>
             <MaterialIcon>close</MaterialIcon>
-            {/* <Img src='/icons/arrow_close.png' alt='' /> */}
           </Close>
           <LightboxContent onKeyUp={e => this.handleKeyUp(e)}>
             <Arrow
@@ -108,7 +104,6 @@ export class Shots extends React.Component {
               showLightBox={showLightBox}
               disabled={selectedImage === 0}
             >
-              {/* <MaterialIcon>keyboard_arrow_left</MaterialIcon> */}
               <Img src='/icons/arrow_previous.svg' alt='' />
             </Arrow>
             {this.getLightBoxImage(data[selectedImage].fluid)}
@@ -117,7 +112,6 @@ export class Shots extends React.Component {
               showLightBox={showLightBox}
               disabled={selectedImage === data.length - 1}
             >
-              {/* <MaterialIcon>keyboard_arrow_right</MaterialIcon> */}
               <Img src='/icons/arrow_next.svg' alt='' />
             </Arrow>
           </LightboxContent>

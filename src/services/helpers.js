@@ -1,5 +1,3 @@
-// import { withPrefix, navigate } from 'gatsby'
-
 export function isExternal(path) {
   return (
     /^http[s]?:\/\//g.test(path)

@@ -13,14 +13,12 @@ exports.handler = async (event, context) => {
     const { headers, queryStringParameters, body } = event
     const { challenge } = queryStringParameters
     if (challenge) {
-      // Verification
       console.info(
         'Success: verification request received and responded to appropriately.',
       )
       return { statusCode: 200, body: challenge, headers: VERIFICATION_HEADERS }
     }
     if (headers['x-dropbox-signature']) {
-      // Execution
       console.info('NOTIFICATION EVENT\n', body)
 
       await axios({
@@ -34,18 +32,10 @@ exports.handler = async (event, context) => {
           'BODY SUCCESS: webhook received from Dropbox and forwarded blah-blah-blah',
       }
     }
-    // Failure
     const msg = 'Failed: the request was not what was expected so nothing happened.'
     console.error('MMSSGG\n', msg)
     return { statusCode: 200, body: msg }
-
-    // // Failure
-    // const msg = 'Failed: the request was not what was expected so nothing happened.'
-    // console.error('MMSSGG\n', msg)
-    // // console.error('NOT EXPECTED REQUEST EVENT\n', event)
-    // return { statusCode: 200, body: msg }
   } catch (e) {
-    // Failure
     console.error('Failed: something went wrong\n', e.message)
     return { statusCode: 500, body: e.message }
   }

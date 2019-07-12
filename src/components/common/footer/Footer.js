@@ -9,8 +9,8 @@ import {
 
 const Footer = () => (
   <MainContainer>
+    <Cameras />
     <FooterContainer>
-      <Cameras />
       <TextContainer>
         <FooterText>&copy; kai.camera, 2018</FooterText>
       </TextContainer>
