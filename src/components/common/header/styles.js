@@ -7,6 +7,7 @@ export const HeaderU = styled.header`
   box-sizing: border-box;
   width: 100%;
   height: 80px;
+  box-shadow: 0 10px 5px 5px royalblue;
 `
 export const Container = styled.div`
   box-sizing: border-box;
@@ -40,7 +41,7 @@ export const Menu = styled.div`
   display: block;
   left: 0;
   height: max-content;
-  transition: top 1s;
+  transition: top 0.5s;
   @media (max-width: 992px) {
     position: absolute;
     width: 100%;
@@ -57,7 +58,7 @@ export const Menu = styled.div`
       text-align: center;
       box-sizing: border-box;
       padding: 10px 20px 10px 0;
-      transition: all 1s;
+      transition: all 0.5s;
     `}
 `
 
@@ -67,7 +68,7 @@ export const Burger = styled.div`
   height: 22px;
   display: none;
   transform: rotate(0);
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
   span {
     display: block;
@@ -78,7 +79,7 @@ export const Burger = styled.div`
     opacity: 1;
     left: 0;
     transform: rotate(0);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   span:nth-child(1) {
     top: 0;

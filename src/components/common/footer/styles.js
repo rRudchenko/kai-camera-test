@@ -22,21 +22,11 @@ export const TextContainer = styled.div`
 export const Cameras = styled.div`
   width: 100%;
   height: 100px;
-  background-size: 100px 40px;
-  -webkit-background-image: url('/icons/camera.svg'), url('/icons/camera.svg'),
-    url('/icons/camera.svg'), url('/icons/camera.svg');
-  -moz-background-image: url('/icons/camera.svg'), url('/icons/camera.svg'),
-    url('/icons/camera.svg'), url('/icons/camera.svg');
-  background-image: url('/icons/camera.svg'), url('/icons/camera.svg'),
-    url('/icons/camera.svg'), url('/icons/camera.svg');
-  -webkit-background-position: top 0 left 0, top 20px left 50px, top 40px left 0,
-    top 60px left 50px;
-  -moz-background-position: top 0 left 0, top 20px left 50px, top 40px left 0,
-    top 60px left 50px;
-  background-position: top 0 left 0, top 20px left 50px, top 40px left 0,
-    top 60px left 50px;
-  -webkit-background-repeat: repeat-x;
-  -moz-background-repeat: repeat-x;
+  background-size: 86px 74px;
+  background-image: url('/icons/cameranew.png'), url('/icons/cameranew.png'),
+    url('/icons/cameranew.png'), url('/icons/cameranew.png');
+  background-position: left top, left 129px top 15px, left 0 top 37px,
+    left 129px top 52px;
   background-repeat: repeat-x;
 `
 

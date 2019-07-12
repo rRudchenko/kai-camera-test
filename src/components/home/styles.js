@@ -12,6 +12,7 @@ export const HomeContainer = styled.section`
   align-items: center;
   max-width: 935px;
   width: 100%;
+  border-top: 2px solid #f9c806;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 10px;
