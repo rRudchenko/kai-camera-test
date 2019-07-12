@@ -7,7 +7,6 @@ export const HeaderU = styled.header`
   box-sizing: border-box;
   width: 100%;
   height: 80px;
-  box-shadow: 0 10px 5px 5px royalblue;
 `
 export const Container = styled.div`
   box-sizing: border-box;
