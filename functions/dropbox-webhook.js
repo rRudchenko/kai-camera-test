@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const NETLIFY_HOOK_URL = 'https://api.netlify.com/build_hooks/5d5fe3e86c86363be64d6015'
+const NETLIFY_HOOK_URL = 'https://api.netlify.com/build_hooks/5d5ff50f275006ab37b55bea'
 
 const VERIFICATION_HEADERS = {
   'Content-Type': 'text/plain',
