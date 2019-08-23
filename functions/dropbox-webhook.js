@@ -2,7 +2,7 @@ const axios = require('axios')
 // require('dotenv').config()
 
 // const { NETLIFY_BUILD_HOOK_URL } = process.env.NETLIFY_HOOK_URL
-const NETLIFY_BUILD_HOOK_URL = 'https://api.netlify.com/build_hooks/5d601038f6428fc8d17c708a'
+const NETLIFY_BUILD_HOOK_URL = 'https://api.netlify.com/build_hooks/5d60218c408efd500fb4f15b'
 
 const VERIFICATION_HEADERS = {
   'Content-Type': 'text/plain',

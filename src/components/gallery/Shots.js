@@ -72,15 +72,15 @@ export class Shots extends React.Component {
     }
   }
 
-  getLightBoxImage = (imgFluid) => {
-    if (!imgFluid) {
+  getLightBoxImage = (img) => {
+    if (!img || !img.fluid) {
       return <Placeholder>NO IMAGES YET</Placeholder>
     }
     return (
       <ShotImage
         objectFit='contain'
         objectPosition='50% 50%'
-        fluid={imgFluid}
+        fluid={img.fluid}
         alt='images gallery'
       />
     )
@@ -112,7 +112,7 @@ export class Shots extends React.Component {
             >
               <Img src='/icons/arrow_previous.svg' alt='' />
             </Arrow>
-            {this.getLightBoxImage(data[selectedImage].fluid)}
+            {this.getLightBoxImage(data[selectedImage])}
             <Arrow
               onClick={this.goNext}
               showLightBox={showLightBox}
