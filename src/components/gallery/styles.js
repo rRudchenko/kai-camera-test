@@ -11,7 +11,6 @@ export const TabsContainer = styled.section`
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
-  height: max-content;
   border-bottom: 1px solid darkgrey;
 `
 
@@ -20,6 +19,7 @@ export const TabItem = styled.span`
   margin-left: 28px;
   box-sizing: border-box;
   color: #4e4e4e;
+  cursor: pointer;
   opacity: 0.6;
   text-decoration: none;
   transition: color 0.5s;
@@ -27,6 +27,9 @@ export const TabItem = styled.span`
     color: #f9c806;
   }
   &:first-child {
+    margin-left: 10px;
+  }
+  @media (max-width: 576px) {
     margin-left: 10px;
   }
 `
