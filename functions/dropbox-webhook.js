@@ -1,7 +1,7 @@
 const axios = require('axios')
 require('dotenv').config()
 
-const { NETLIFY_HOOK_URL } = process.env
+const { NETLIFY_HOOK_URL } = process.env.NETLIFY_HOOK_URL
 
 const VERIFICATION_HEADERS = {
   'Content-Type': 'text/plain',

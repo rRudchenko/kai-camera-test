@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const { DBX_ACCESS_TOKEN } = process.env
+const { DBX_ACCESS_TOKEN } = process.env.DBX_ACCESS_TOKEN
 
 module.exports = {
   siteMetadata: {
