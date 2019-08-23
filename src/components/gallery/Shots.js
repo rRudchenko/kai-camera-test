@@ -3,6 +3,7 @@ import { Img } from '../common/img/Img'
 import {
   MaterialIcon,
   ShotContainer,
+  Placeholder,
   ShotsList,
   ShotImage,
   LightboxModal,
@@ -71,14 +72,19 @@ export class Shots extends React.Component {
     }
   }
 
-  getLightBoxImage = imgFluid => (
-    <ShotImage
-      objectFit='contain'
-      objectPosition='50% 50%'
-      fluid={imgFluid}
-      alt='images gallery'
-    />
-  )
+  getLightBoxImage = (imgFluid) => {
+    if (!imgFluid) {
+      return <Placeholder>NO IMAGES YET</Placeholder>
+    }
+    return (
+      <ShotImage
+        objectFit='contain'
+        objectPosition='50% 50%'
+        fluid={imgFluid}
+        alt='images gallery'
+      />
+    )
+  }
 
   render() {
     const { data } = this.props

@@ -53,6 +53,14 @@ export const ShotContainer = styled.div`
   object-position: 50% 50%;
 `
 
+export const Placeholder = styled.h2`
+  font: 20px/50px 'Ubuntu', sans-serif;
+  margin-left: 28px;
+  color: #4e4e4e;
+  cursor: pointer;
+  text-decoration: none;
+`
+
 export const ShotImage = styled(Img)`
   margin: auto;
   width: auto;

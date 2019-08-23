@@ -1,6 +1,7 @@
-require('dotenv').config()
+// require('dotenv').config()
 
-const { DBX_ACCESS_TOKEN } = process.env.DBX_ACCESS_TOKEN
+// const { DBX_ACCESS_TOKEN } = process.env.DBX_ACCESS_TOKEN
+const DBX_ACCESS_TOKEN = 'auTelTITMHAAAAAAAAAATG35myi8gXKZKYRe3QjHu_AZve2d2BlxttTf5PqlmN8d'
 
 module.exports = {
   siteMetadata: {

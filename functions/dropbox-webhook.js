@@ -1,7 +1,8 @@
 const axios = require('axios')
-require('dotenv').config()
+// require('dotenv').config()
 
-const { NETLIFY_HOOK_URL } = process.env.NETLIFY_HOOK_URL
+// const { NETLIFY_BUILD_HOOK_URL } = process.env.NETLIFY_HOOK_URL
+const NETLIFY_BUILD_HOOK_URL = 'https://api.netlify.com/build_hooks/5d601038f6428fc8d17c708a'
 
 const VERIFICATION_HEADERS = {
   'Content-Type': 'text/plain',
@@ -24,7 +25,7 @@ exports.handler = async (event, context) => {
 
       await axios({
         method: 'post',
-        url: NETLIFY_HOOK_URL,
+        url: NETLIFY_BUILD_HOOK_URL,
         body: '',
       }).then(response => console.info('NOTIFICATION RESPONSE', response.data))
       return {

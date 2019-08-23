@@ -19,11 +19,10 @@ NETLIFY_BUILD_HOOK_URL=
 ##netlify
 
 1. click "new site from git"
-2. select your git account and 'kai-camera' repo in it
-3. wait for deploy
-4. go Overview > Site settings > Build & deploy, and there go:
-5. Build hooks: press 'Add build hook'. choose [build hook name], copy it to clipboard and press 'Save'
-   2. Environment > Environment variables: 'Edit variables'. Paste [build hook name] as a 'key', return to "Build hooks", copy hook url and paste as a variable's 'value'
+2. select your git account with 'kai-camera' repo in it, wait for deploy
+3. go Overview > Site settings > Build & deploy, and there go:
+  1. Build hooks: press 'Add build hook'. type NETLIFY_BUILD_HOOK_URL and press 'Save'. copy build hook URL to clipboard.
+   2. Environment > Environment variables: click 'Edit variables'. Type NETLIFY_BUILD_HOOK_URL as a 'key' and paste value from clipboard as a variable's 'value'
 
 ##dropbox
 
@@ -35,6 +34,7 @@ NETLIFY_BUILD_HOOK_URL=
 6. Name your app: type your app name
 7. click 'Create app' button (bottom right area)
 8. Find string 'Generated access token' and click 'generate'.
+9.
 
 ## How to build and run project:
 
