@@ -1,3 +1,7 @@
+require('dotenv').config()
+
+const { DBX_ACCESS_TOKEN } = process.env
+
 module.exports = {
   siteMetadata: {
     title: 'KAI CAMERA',
@@ -42,8 +46,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-dropbox',
       options: {
-        accessToken:
-          'auTelTITMHAAAAAAAAAARkQg0B-IAGo6L9yOxYrMlMkxQIsp-BMMS3c3sCDGxyfs',
+        accessToken: `${DBX_ACCESS_TOKEN}`,
         extensions: ['.jpg', '.png'],
         path: '',
         recursive: false,
